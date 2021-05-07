@@ -94,8 +94,8 @@ void TextLCD_Position(TextLCDType *lcd, int x, int y)
 
 void TextLCD_Putchar(TextLCDType *lcd, uint8_t data)
 {
-	TextLCD_Cmd(lcd, data);
-	delay_us(50);
+	TextLCD_Data(lcd, data);
+	//delay_us(50);
 }
 
 void TextLCD_Puts(TextLCDType *lcd, char *string)

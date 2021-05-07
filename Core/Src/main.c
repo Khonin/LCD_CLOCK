@@ -167,17 +167,20 @@ int main(void)
 	while (1)
 	{
 		if(paint==1){
-		TextLCD_Clear(&lcd);
-		//TextLCD_Position(&lcd, 6, 0);
 
-		TextLCD_Data(&lcd, (uint8_t)'0'+h10);	//Set 10 hour digit
-		TextLCD_Data(&lcd, (uint8_t)'0'+h1);	//Set 1 hour digit
-		TextLCD_Data(&lcd, ':');
-		TextLCD_Data(&lcd, (uint8_t)'0'+min10);	//Set 10 minute digit
-		TextLCD_Data(&lcd, (uint8_t)'0'+min1);	//set 1 minute digit
-		TextLCD_Data(&lcd, ':');
-		TextLCD_Data(&lcd, (uint8_t)'0'+sec10);	//set 10 second digit
-		TextLCD_Data(&lcd, (uint8_t) '0'+sec1);	//set 1 second digit
+		TextLCD_Clear(&lcd);
+		TextLCD_Position(&lcd, 3, 0);
+		TextLCD_Puts(&lcd, "Klockan ar: ");
+		//TextLCD_Putchar(&lcd, (uint8_t) 'A');
+		TextLCD_Position(&lcd, 4, 1);
+		TextLCD_Putchar(&lcd, (uint8_t)'0'+h10);	//Set 10 hour digit
+		TextLCD_Putchar(&lcd, (uint8_t)'0'+h1);	//Set 1 hour digit
+		TextLCD_Putchar(&lcd, ':');
+		TextLCD_Putchar(&lcd, (uint8_t)'0'+min10);	//Set 10 minute digit
+		TextLCD_Putchar(&lcd, (uint8_t)'0'+min1);	//set 1 minute digit
+		TextLCD_Putchar(&lcd, ':');
+		TextLCD_Putchar(&lcd, (uint8_t)'0'+sec10);	//set 10 second digit
+		TextLCD_Putchar(&lcd, (uint8_t) '0'+sec1);	//set 1 second digit
 		paint=0;
 		}
 
